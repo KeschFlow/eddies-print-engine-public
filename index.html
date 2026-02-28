@@ -1,160 +1,192 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#7c3aed" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#7c3aed" />
 
-  <title>E. P. E. — Eddie’s Print Engine</title>
+    <title>E. P. E. — Eddie’s Print Engine</title>
+    <meta
+      name="description"
+      content="E. P. E. — Eddie’s Print Engine: Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
+    />
 
-  <meta name="description"
-        content="E. P. E. — Eddie’s Print Engine: Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg." />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://keschflow.github.io/eddies-print-engine-public/" />
 
-  <!-- Canonical -->
-  <link rel="canonical"
-        href="https://keschflow.github.io/eddies-print-engine-public/" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="E. P. E. — Eddie’s Print Engine" />
+    <meta
+      property="og:description"
+      content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
+    />
+    <meta property="og:url" content="https://keschflow.github.io/eddies-print-engine-public/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
+    <meta property="og:image:secure_url" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="E.P.E. — Eddie’s Print Engine (Preview)" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="E. P. E. — Eddie’s Print Engine" />
-  <meta property="og:description"
-        content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg." />
-  <meta property="og:url"
-        content="https://keschflow.github.io/eddies-print-engine-public/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image"
-        content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="E. P. E. — Eddie’s Print Engine" />
+    <meta
+      name="twitter:description"
+      content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
+    />
+    <meta name="twitter:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
+    <meta name="twitter:image:alt" content="E.P.E. — Eddie’s Print Engine (Preview)" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="E. P. E. — Eddie’s Print Engine" />
-  <meta name="twitter:description"
-        content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten." />
-  <meta name="twitter:image"
-        content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
+    <!-- Inline SVG Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href='data:image/svg+xml;utf8,
+      <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="28" fill="%237c3aed"/>
+        <circle cx="64" cy="58" r="34" fill="white"/>
+        <circle cx="50" cy="52" r="5" fill="%23000000"/>
+        <circle cx="78" cy="52" r="5" fill="%23000000"/>
+        <path d="M54 74c6 8 14 8 20 0" stroke="%23000000" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M38 49c6-10 18-16 26-16 8 0 20 6 26 16" stroke="%23000000" stroke-width="4" fill="none" opacity="0.18" stroke-linecap="round"/>
+      </svg>'
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href='data:image/svg+xml;utf8,
-    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-      <rect width="128" height="128" rx="28" fill="%237c3aed"/>
-      <circle cx="64" cy="58" r="34" fill="white"/>
-      <circle cx="50" cy="52" r="5" fill="%23000000"/>
-      <circle cx="78" cy="52" r="5" fill="%23000000"/>
-      <path d="M54 74c6 8 14 8 20 0" stroke="%23000000" stroke-width="4" fill="none" stroke-linecap="round"/>
-    </svg>' />
+    <!-- Google Tag Manager (optional – wenn du es wirklich nutzt) -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-52GRQSL");
+    </script>
 
-  <style>
-    :root {
-      --purple: #7c3aed;
-      --purple-dark: #4c1d95;
-      --glass: rgba(255,255,255,0.10);
-      --glass-border: rgba(255,255,255,0.18);
-    }
+    <style>
+      :root {
+        --purple: #7c3aed;
+        --purple-dark: #4c1d95;
+        --glass: rgba(255, 255, 255, 0.10);
+        --glass2: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.18);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+        color: #fff;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 980px;
+      }
+      .card {
+        text-align: center;
+        background: linear-gradient(180deg, var(--glass), var(--glass2));
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        padding: 44px 30px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+      }
+      h1 {
+        font-size: clamp(2.2rem, 6.6vw, 4.2rem);
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+      }
+      .lead {
+        font-size: clamp(1.08rem, 2.6vw, 1.45rem);
+        max-width: 72ch;
+        margin: 0 auto 26px;
+        opacity: 0.95;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin: 18px 0 8px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 850;
+        font-size: 1.15rem;
+        background: #fff;
+        color: var(--purple-dark);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.40);
+        transition: transform .18s ease, box-shadow .18s ease;
+        white-space: nowrap;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.50);
+      }
+      .meta {
+        margin-top: 14px;
+        font-size: 1.02rem;
+        opacity: 0.92;
+      }
+      .submeta {
+        margin-top: 10px;
+        font-size: 0.98rem;
+        opacity: 0.88;
+      }
+      .footer {
+        margin-top: 22px;
+        font-size: 0.95rem;
+        opacity: 0.78;
+      }
+      @media (max-width: 520px) {
+        .card { padding: 32px 18px; }
+        .btn { width: 100%; }
+      }
+    </style>
+  </head>
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+  <body>
+    <!-- GTM noscript -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-52GRQSL"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+    <main class="wrap">
+      <section class="card">
+        <h1>E. P. E.<br />Eddie’s Print Engine</h1>
 
-    .wrap { max-width: 980px; width: 100%; }
+        <p class="lead">
+          Aus deinen Fotos wird ein persönliches Buch.<br />
+          Direkt starten — ohne Login, ohne Umweg.
+        </p>
 
-    .card {
-      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.06));
-      border: 1px solid var(--glass-border);
-      border-radius: 28px;
-      padding: 40px 28px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 20px 70px rgba(0,0,0,0.45);
-      text-align: center;
-    }
+        <div class="actions">
+          <a class="btn" href="https://eddies-print-engine.streamlit.app" target="_blank" rel="noopener">
+            App starten →
+          </a>
+        </div>
 
-    h1 {
-      font-size: clamp(2.4rem, 7vw, 4.2rem);
-      line-height: 1.05;
-      margin-bottom: 14px;
-    }
-
-    .lead {
-      font-size: clamp(1.12rem, 2.8vw, 1.45rem);
-      max-width: 70ch;
-      margin: 0 auto 22px;
-      opacity: 0.95;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: center;
-      margin: 26px 0 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 26px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 1.15rem;
-      transition: all 0.18s ease;
-      background: white;
-      color: var(--purple-dark);
-      box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 50px rgba(0,0,0,0.5);
-    }
-
-    .meta {
-      margin-top: 14px;
-      font-size: 1.02rem;
-      opacity: 0.92;
-    }
-
-    .footer {
-      margin-top: 22px;
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      .card { padding: 28px 18px; }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <section class="card">
-      <h1>E. P. E.<br/>Eddie’s Print Engine</h1>
-
-      <p class="lead">
-        Aus deinen Fotos wird ein persönliches Buch.<br/>
-        Direkt starten. Kein Login. Kein Umweg.
-      </p>
-
-      <div class="actions">
-        <a class="btn"
-           href="https://eddies-print-engine.streamlit.app"
-           target="_blank"
-           rel="noopener">
-          App starten →
-        </a>
-      </div>
-
-      <div class="meta">Ein Link. Ein Einstieg. Kein Gelaber.</div>
-      <div class="footer">© 2026 Eddie’s World · E.P.E.</div>
-    </section>
-  </div>
-</body>
+        <div class="meta">Ein Link. Ein Einstieg. Kein Gelaber.</div>
+        <div class="submeta">Direkt starten. Kein Login. Kein Umweg.</div>
+        <div class="footer">© 2026 Eddie’s World · E.P.E.</div>
+      </section>
+    </main>
+  </body>
 </html>

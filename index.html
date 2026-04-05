@@ -1,184 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#7c3aed" />
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>E. P. E. — Eddie’s Print Engine</title>
-    <meta
-      name="description"
-      content="Turn your photos into real printable books. Members only inside Eddie’s World."
-    />
+<title>Eddie’s Print Engine</title>
+<meta name="description" content="Members only tool inside Eddie’s World." />
 
-    <link rel="canonical" href="https://keschflow.github.io/eddies-print-engine-public/" />
+<style>
+:root{
+  --purple:#7c3aed;
+  --dark:#4c1d95;
+}
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="E. P. E. — Eddie’s Print Engine" />
-    <meta property="og:description" content="Members only tool inside Eddie’s World. Create real printable books from your photos." />
-    <meta property="og:url" content="https://keschflow.github.io/eddies-print-engine-public/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href='data:image/svg+xml;utf8,
-      <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-        <rect width="128" height="128" rx="28" fill="%237c3aed"/>
-        <circle cx="64" cy="58" r="34" fill="white"/>
-        <circle cx="50" cy="52" r="5" fill="%23000000"/>
-        <circle cx="78" cy="52" r="5" fill="%23000000"/>
-        <path d="M54 74c6 8 14 8 20 0" stroke="%23000000" stroke-width="4" fill="none" stroke-linecap="round"/>
-      </svg>'
-    />
+body{
+  font-family:system-ui;
+  background:linear-gradient(135deg,var(--purple),var(--dark));
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
 
-    <style>
-      :root {
-        --purple: #7c3aed;
-        --purple-dark: #4c1d95;
-        --glass: rgba(255, 255, 255, 0.10);
-        --glass2: rgba(255, 255, 255, 0.06);
-        --border: rgba(255, 255, 255, 0.18);
-      }
+.card{
+  text-align:center;
+  padding:40px 24px;
+  border-radius:24px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  max-width:500px;
+}
 
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+h1{
+  font-size:32px;
+  margin-bottom:12px;
+}
 
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        background: linear-gradient(135deg, var(--purple), var(--purple-dark));
-        color: #fff;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-      }
+p{
+  margin-bottom:24px;
+  opacity:.9;
+}
 
-      .wrap {
-        width: 100%;
-        max-width: 960px;
-      }
+.btn{
+  display:block;
+  margin:10px auto;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+}
 
-      .card {
-        text-align: center;
-        background: linear-gradient(180deg, var(--glass), var(--glass2));
-        border: 1px solid var(--border);
-        border-radius: 28px;
-        padding: 44px 28px;
-        backdrop-filter: blur(12px);
-        box-shadow: 0 20px 70px rgba(0,0,0,0.45);
-      }
+.primary{
+  background:#fff;
+  color:#4c1d95;
+}
 
-      h1 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
-        margin-bottom: 14px;
-      }
+.secondary{
+  border:1px solid #fff;
+  color:#fff;
+}
 
-      .lead {
-        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-        margin-bottom: 24px;
-        opacity: .95;
-      }
+.meta{
+  margin-top:14px;
+  font-size:13px;
+  opacity:.8;
+}
+</style>
+</head>
 
-      .actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 14px;
-        margin-top: 20px;
-      }
+<body>
 
-      .btn {
-        padding: 14px 28px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 1.1rem;
-        background: #fff;
-        color: var(--purple-dark);
-        box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-        transition: .18s;
-      }
+<div class="card">
 
-      .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 50px rgba(0,0,0,0.5);
-      }
+  <h1>Eddie’s Print Engine</h1>
 
-      .btn.secondary {
-        background: transparent;
-        border: 1px solid rgba(255,255,255,0.4);
-        color: #fff;
-      }
+  <p>
+    Create real books from your photos.<br>
+    Available only inside Eddie’s World.
+  </p>
 
-      .meta {
-        font-size: 0.95rem;
-        opacity: 0.85;
-      }
+  <a class="btn primary" href="https://ko-fi.com/eddiesworld/tiers" target="_blank">
+    🔐 UNLOCK ACCESS
+  </a>
 
-      .submeta {
-        font-size: 0.9rem;
-        opacity: 0.8;
-        margin-top: 8px;
-        line-height: 1.5;
-      }
+  <a class="btn secondary" href="https://keschflow.github.io/unaufhaltsam/" target="_blank">
+    ← Back to Eddie’s World
+  </a>
 
-      .footer {
-        margin-top: 24px;
-        font-size: 0.9rem;
-        opacity: 0.7;
-      }
+  <div class="meta">
+    Includes archive + new uploads + book generator
+  </div>
 
-      @media (max-width:520px){
-        .btn { width:100%; }
-      }
-    </style>
-  </head>
+</div>
 
-  <body>
-    <main class="wrap">
-      <section class="card">
-
-        <h1>E. P. E.<br/>Eddie’s Print Engine</h1>
-
-        <p class="lead">
-          Turn your photos into real printable books.<br>
-          Members only inside Eddie’s World.
-        </p>
-
-        <div class="actions">
-
-          <!-- PRIMARY: PAYWALL -->
-          <a class="btn" href="https://ko-fi.com/eddiesworld/tiers" target="_blank">
-            🔐 UNLOCK ACCESS
-          </a>
-
-          <div class="meta">
-            Members only · Access via Ko-fi
-          </div>
-
-          <div class="submeta">
-            Includes:<br>
-            • Full Eddie archive<br>
-            • New uploads<br>
-            • Print Engine access
-          </div>
-
-          <!-- SECONDARY: TOOL (optional später) -->
-          <!--
-          <a class="btn secondary" href="https://eddies-print-engine.streamlit.app" target="_blank">
-            🚀 CREATE YOUR BOOK
-          </a>
-          -->
-
-        </div>
-
-        <div class="footer">
-          One tool. Real output. No templates.
-        </div>
-
-      </section>
-    </main>
-  </body>
+</body>
 </html>

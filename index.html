@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,37 +8,19 @@
     <title>E. P. E. — Eddie’s Print Engine</title>
     <meta
       name="description"
-      content="E. P. E. — Eddie’s Print Engine: Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
+      content="Turn your photos into activity books for kids and seniors. Members only."
     />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://keschflow.github.io/eddies-print-engine-public/" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="E. P. E. — Eddie’s Print Engine" />
-    <meta
-      property="og:description"
-      content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
-    />
+    <meta property="og:description" content="Create activity books from your own photos. Members only." />
     <meta property="og:url" content="https://keschflow.github.io/eddies-print-engine-public/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
-    <meta property="og:image:secure_url" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="E.P.E. — Eddie’s Print Engine (Preview)" />
 
-    <!-- Twitter/X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="E. P. E. — Eddie’s Print Engine" />
-    <meta
-      name="twitter:description"
-      content="Aus deinen Fotos wird ein persönliches Buch. Direkt starten. Kein Login. Kein Umweg."
-    />
-    <meta name="twitter:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
-    <meta name="twitter:image:alt" content="E.P.E. — Eddie’s Print Engine (Preview)" />
-
-    <!-- Inline SVG Favicon -->
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/svg+xml"
@@ -49,23 +31,8 @@
         <circle cx="50" cy="52" r="5" fill="%23000000"/>
         <circle cx="78" cy="52" r="5" fill="%23000000"/>
         <path d="M54 74c6 8 14 8 20 0" stroke="%23000000" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <path d="M38 49c6-10 18-16 26-16 8 0 20 6 26 16" stroke="%23000000" stroke-width="4" fill="none" opacity="0.18" stroke-linecap="round"/>
       </svg>'
     />
-
-    <!-- Google Tag Manager (optional – wenn du es wirklich nutzt) -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-52GRQSL");
-    </script>
 
     <style>
       :root {
@@ -75,117 +42,123 @@
         --glass2: rgba(255, 255, 255, 0.06);
         --border: rgba(255, 255, 255, 0.18);
       }
+
       * { margin: 0; padding: 0; box-sizing: border-box; }
+
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+        font-family: system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, var(--purple), var(--purple-dark));
         color: #fff;
         min-height: 100vh;
         display: grid;
         place-items: center;
         padding: 24px;
       }
+
       .wrap {
         width: 100%;
-        max-width: 980px;
+        max-width: 960px;
       }
+
       .card {
         text-align: center;
         background: linear-gradient(180deg, var(--glass), var(--glass2));
         border: 1px solid var(--border);
         border-radius: 28px;
-        padding: 44px 30px;
+        padding: 44px 28px;
         backdrop-filter: blur(12px);
-        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+        box-shadow: 0 20px 70px rgba(0,0,0,0.45);
       }
+
       h1 {
-        font-size: clamp(2.2rem, 6.6vw, 4.2rem);
-        line-height: 1.04;
-        letter-spacing: -0.02em;
+        font-size: clamp(2.2rem, 6vw, 4rem);
         margin-bottom: 14px;
       }
+
       .lead {
-        font-size: clamp(1.08rem, 2.6vw, 1.45rem);
-        max-width: 72ch;
-        margin: 0 auto 26px;
-        opacity: 0.95;
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        margin-bottom: 24px;
+        opacity: .95;
       }
+
       .actions {
         display: flex;
-        justify-content: center;
-        margin: 18px 0 8px;
-      }
-      .btn {
-        display: inline-flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 10px;
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .btn {
         padding: 14px 28px;
         border-radius: 999px;
         text-decoration: none;
-        font-weight: 850;
-        font-size: 1.15rem;
+        font-weight: 800;
+        font-size: 1.1rem;
         background: #fff;
         color: var(--purple-dark);
-        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.40);
-        transition: transform .18s ease, box-shadow .18s ease;
-        white-space: nowrap;
+        box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+        transition: .18s;
       }
+
       .btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.50);
+        box-shadow: 0 18px 50px rgba(0,0,0,0.5);
       }
-      .meta {
-        margin-top: 14px;
-        font-size: 1.02rem;
-        opacity: 0.92;
+
+      .btn.secondary {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.4);
+        color: #fff;
       }
-      .submeta {
-        margin-top: 10px;
-        font-size: 0.98rem;
-        opacity: 0.88;
-      }
-      .footer {
-        margin-top: 22px;
+
+      .note {
         font-size: 0.95rem;
-        opacity: 0.78;
+        opacity: 0.85;
       }
-      @media (max-width: 520px) {
-        .card { padding: 32px 18px; }
-        .btn { width: 100%; }
+
+      .footer {
+        margin-top: 24px;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      @media (max-width:520px){
+        .btn { width:100%; }
       }
     </style>
   </head>
 
   <body>
-    <!-- GTM noscript -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-52GRQSL"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-
     <main class="wrap">
       <section class="card">
-        <h1>E. P. E.<br />Eddie’s Print Engine</h1>
+
+        <h1>E. P. E.<br/>Eddie’s Print Engine</h1>
 
         <p class="lead">
-          Aus deinen Fotos wird ein persönliches Buch.<br />
-          Direkt starten — ohne Login, ohne Umweg.
+          Turn your photos into activity books for kids and seniors.
         </p>
 
         <div class="actions">
-          <a class="btn" href="https://eddies-print-engine.streamlit.app" target="_blank" rel="noopener">
-            App starten →
+
+          <!-- PRIMARY ACTION -->
+          <a class="btn" href="https://eddies-print-engine.streamlit.app" target="_blank">
+            🚀 CREATE YOUR BOOK
           </a>
+
+          <div class="note">Members only · Access via Ko-fi</div>
+
+          <!-- SECONDARY -->
+          <a class="btn secondary" href="https://ko-fi.com/eddiesworld" target="_blank">
+            💜 UNLOCK ACCESS
+          </a>
+
         </div>
 
-        <div class="meta">Ein Link. Ein Einstieg. Kein Gelaber.</div>
-        <div class="submeta">Direkt starten. Kein Login. Kein Umweg.</div>
-        <div class="footer">© 2026 Eddie’s World · E.P.E.</div>
+        <div class="footer">
+          One tool. Real output. No templates.
+        </div>
+
       </section>
     </main>
   </body>

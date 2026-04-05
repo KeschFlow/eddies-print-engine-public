@@ -8,14 +8,14 @@
     <title>E. P. E. — Eddie’s Print Engine</title>
     <meta
       name="description"
-      content="Turn your photos into activity books for kids and seniors. Members only."
+      content="Turn your photos into real printable books. Members only inside Eddie’s World."
     />
 
     <link rel="canonical" href="https://keschflow.github.io/eddies-print-engine-public/" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="E. P. E. — Eddie’s Print Engine" />
-    <meta property="og:description" content="Create activity books from your own photos. Members only." />
+    <meta property="og:description" content="Members only tool inside Eddie’s World. Create real printable books from your photos." />
     <meta property="og:url" content="https://keschflow.github.io/eddies-print-engine-public/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://keschflow.github.io/eddies-print-engine-public/og-preview.png" />
@@ -112,9 +112,16 @@
         color: #fff;
       }
 
-      .note {
+      .meta {
         font-size: 0.95rem;
         opacity: 0.85;
+      }
+
+      .submeta {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-top: 8px;
+        line-height: 1.5;
       }
 
       .footer {
@@ -136,22 +143,34 @@
         <h1>E. P. E.<br/>Eddie’s Print Engine</h1>
 
         <p class="lead">
-          Turn your photos into activity books for kids and seniors.
+          Turn your photos into real printable books.<br>
+          Members only inside Eddie’s World.
         </p>
 
         <div class="actions">
 
-          <!-- PRIMARY ACTION -->
-          <a class="btn" href="https://eddies-print-engine.streamlit.app" target="_blank">
+          <!-- PRIMARY: PAYWALL -->
+          <a class="btn" href="https://ko-fi.com/eddiesworld" target="_blank">
+            🔐 UNLOCK ACCESS
+          </a>
+
+          <div class="meta">
+            Members only · Access via Ko-fi
+          </div>
+
+          <div class="submeta">
+            Includes:<br>
+            • Full Eddie archive<br>
+            • New uploads<br>
+            • Print Engine access
+          </div>
+
+          <!-- SECONDARY: TOOL (optional später) -->
+          <!--
+          <a class="btn secondary" href="https://eddies-print-engine.streamlit.app" target="_blank">
             🚀 CREATE YOUR BOOK
           </a>
-
-          <div class="note">Members only · Access via Ko-fi</div>
-
-          <!-- SECONDARY -->
-          <a class="btn secondary" href="https://ko-fi.com/eddiesworld" target="_blank">
-            💜 UNLOCK ACCESS
-          </a>
+          -->
 
         </div>
 

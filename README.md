@@ -1,25 +1,39 @@
 # E. P. E. – Eddie’s Print Engine
 
-High-quality 26-page personalized coloring & mini-quest books generated from user images.
+Generate structured, print-ready KDP books from your own images.
 
-🚀 **Live App:**  
+🚀 **Live App**  
 https://eddies-print-engine.streamlit.app
 
-🌐 **Landing Page:**  
+🌐 **Landing Page**  
 https://keschflow.github.io/eddies-print-engine-public/
 
 ---
 
 ## What it does
 
-E.P.E. transforms uploaded photos into a structured 26-page printable book:
+E.P.E. converts uploaded images into a structured 26-page activity book:
 
-- 🖼️ Clean sketch conversion (OpenCV pipeline)
-- 📘 Fixed 26-page structure
-- 🎯 Kids Mode (XP / Action / Mini-Quests)
-- 🧘 Senior Mode (calm / minimal)
-- 🖨️ KDP-ready PDF export
-- 🟣 Premium sketch engine
+- 🖼️ Sketch conversion (OpenCV pipeline)
+- 📘 Fixed 26-page system (Intro + 24 pages + Outro)
+- 🎯 Kids Mode (XP, action, visual tasks)
+- 🧘 Senior Mode (calm, minimal, cognitive activation)
+- 🖨️ KDP-ready PDF output
+- 🟣 High-contrast sketch rendering
+
+---
+
+## What makes it different
+
+Not a template generator.  
+Not AI spam.  
+
+E.P.E. builds **structured, repeatable book systems**.
+
+- deterministic layout
+- print-safe margins (KDP)
+- integrated task layer (not just coloring)
+- consistent output format
 
 ---
 
@@ -29,36 +43,33 @@ E.P.E. transforms uploaded photos into a structured 26-page printable book:
 - OpenCV
 - ReportLab (vector PDF + QR)
 - Pillow
-- SQLite (fair use limiter)
-- Stripe (optional supporter mode)
+- SQLite (rate limiting / tracking)
+- Stripe (optional supporter access)
 
 ---
 
-## Architecture (Hybrid Model)
+## Architecture
 
-This public repository contains:
+This repository contains the **public layer**:
 
-- Landing page
-- Documentation
-- App access
-- Public description layer
+- landing page
+- documentation
+- access point
 
-The core engine, rendering logic and monetization backend remain private.
+The **core engine and generation logic remain private**.
 
 ---
 
-## Why this exists
+## Purpose
 
-One link.  
-One entry point.  
-No complexity.
+One entry.  
+One system.  
+One output.
 
-E.P.E. is built as a focused print engine — not a template farm.
+E.P.E. is built as a **print engine**, not a content playground.
 
 ---
 
 ## Support
-
-If you want to support development:
 
 https://ko-fi.com/eddiesworld

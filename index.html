@@ -16,7 +16,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  font-family:system-ui;
+  font-family:system-ui, -apple-system, sans-serif;
   background:linear-gradient(135deg,var(--purple),var(--dark));
   color:#fff;
   display:flex;
@@ -32,6 +32,7 @@ body{
   background:rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
   max-width:500px;
+  width: 90%;
 }
 
 h1{
@@ -51,6 +52,11 @@ p{
   border-radius:999px;
   font-weight:800;
   text-decoration:none;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .primary{
@@ -82,11 +88,20 @@ p{
     Available only inside Eddie’s World.
   </p>
 
+  <div style="margin:22px 0 10px; padding:18px; background:rgba(255,255,255,0.08); border:1px dashed rgba(255,255,255,0.35); border-radius:18px;">
+    <p style="margin:0 0 12px; opacity:1; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;">
+      Prove your focus first
+    </p>
+
+    <a class="btn primary" href="https://keschflow.github.io/unaufhaltsam/eddie-game.html?v=5.5" target="_blank" style="margin:0 auto;">
+      CAN YOU STAY FOCUSED?
+    </a>
+  </div>
   <a class="btn primary" href="https://ko-fi.com/eddiesworld" target="_blank">
     🔐 UNLOCK ACCESS
   </a>
 
-  <a class="btn secondary" href="https://keschflow.github.io/unaufhaltsam/" target="_blank">
+  <a class="btn secondary" href="https://keschflow.github.io/unaufhaltsam/?v=1" target="_blank">
     ← Back to Eddie’s World
   </a>
 

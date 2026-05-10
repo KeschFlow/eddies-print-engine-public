@@ -1,39 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Eddie’s Print Engine</title>
+<title>Eddie’s Print Engine | Access</title>
 <style>
-:root{ --purple:#7c3aed; --dark:#4c1d95; }
+:root{ --purple:#7c3aed; --dark:#2e1065; --white:#ffffff; }
 *{margin:0;padding:0;box-sizing:border-box;}
-body{ font-family:system-ui, -apple-system, sans-serif; background:linear-gradient(135deg,var(--purple),var(--dark)); color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh; }
-.card{ text-align:center; padding:40px 24px; border-radius:24px; background:rgba(255,255,255,0.08); backdrop-filter:blur(12px); max-width:500px; width:90%; }
-h1{ font-size:32px; margin-bottom:12px; }
-p{ margin-bottom:24px; opacity:.9; }
-.btn{ display:block; margin:10px auto; padding:14px 22px; border-radius:999px; font-weight:800; text-decoration:none; transition:all 0.1s ease; }
-.btn:hover{ transform:scale(1.03); }
+body{ 
+    font-family:'Helvetica Neue', Arial, sans-serif; 
+    background: linear-gradient(135deg, var(--purple), var(--dark)); 
+    color: var(--white); 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    min-height:100vh; 
+}
+.card{ 
+    text-align:center; 
+    padding:48px 24px; 
+    border-radius:28px; 
+    background:rgba(0,0,0,0.25); 
+    backdrop-filter:blur(20px); 
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width:500px; 
+    width:92%; 
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+h1{ font-size:36px; font-weight:900; margin-bottom:12px; text-transform:uppercase; letter-spacing:-1px; }
+p{ margin-bottom:28px; opacity:.85; line-height:1.5; font-size:16px; }
+.wall-box {
+    margin:24px 0 16px; 
+    padding:24px; 
+    background:rgba(255,255,255,0.05); 
+    border:2px dashed rgba(255,255,255,0.2); 
+    border-radius:20px;
+}
+.wall-label {
+    display:block;
+    margin-bottom:16px; 
+    font-size:12px; 
+    font-weight:900; 
+    letter-spacing:.15em; 
+    text-transform:uppercase;
+    color: #fff;
+}
+.btn{ 
+    display:block; 
+    margin:12px auto; 
+    padding:18px 24px; 
+    border-radius:16px; 
+    font-weight:900; 
+    text-decoration:none; 
+    transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+    text-transform:uppercase;
+    font-size:14px;
+}
+.btn:hover{ transform:translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3); }
 .btn:active{ transform:scale(0.98); }
-.primary{ background:#fff; color:#4c1d95; }
-.secondary{ border:1px solid #fff; color:#fff; }
-.meta{ margin-top:14px; font-size:13px; opacity:.8; }
+
+.primary{ background:var(--white); color:var(--dark); }
+.secondary{ background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3); color:#fff; }
+.ghost { color:rgba(255,255,255,0.5); font-size:12px; margin-top:20px; }
+
+.brand-accent { color: var(--white); opacity: 0.6; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-top: 30px; letter-spacing: 2px;}
 </style>
 </head>
 <body>
 <div class="card">
   <h1>Eddie’s Print Engine</h1>
-  <p>Create real books from your photos.<br>Available only inside Eddie’s World.</p>
+  <p>Create real books from your photos.<br>No staging. Just raw creation.</p>
   
-  <div style="margin:22px 0 10px; padding:18px; background:rgba(255,255,255,0.08); border:1px dashed rgba(255,255,255,0.35); border-radius:18px;">
-    <p style="margin:0 0 12px; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;">Prove your focus first</p>
-    <a class="btn primary" href="https://keschflow.github.io/unaufhaltsam/eddie-game.html?v=5.7">🎯 PROVE YOUR FOCUS</a>
+  <div class="wall-box">
+    <span class="wall-label">Level 30 is the wall</span>
+    <a class="btn primary" href="https://focus-system-unaufhaltsam.github.io/eddie/">🎯 PROVE YOUR FOCUS</a>
   </div>
 
   <a class="btn primary" href="https://ko-fi.com/eddiesworld">🔐 UNLOCK ACCESS</a>
   
-  <a class="btn secondary" href="https://keschflow.github.io/unaufhaltsam/?v=1">← Back to Eddie’s World</a>
+  <a class="btn secondary" href="https://focus-system-unaufhaltsam.github.io/eddie/">← Back to Eddie’s World</a>
 
-  <div class="meta">Includes archive + generator</div>
+  <div class="ghost">Includes photo archive + book generator</div>
+  <div class="brand-accent">Real life. No staging. UNAUFHALTSAM.</div>
 </div>
 </body>
 </html>
